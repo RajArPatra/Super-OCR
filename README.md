@@ -51,7 +51,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
     </li>
-    <li><a href="#references">Acknowledgements</a></li>
+    <li><a href="#references">Reference</a></li>
     <li><a href="#license">License</a></li>
    
     
@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/RajArPatra/Super-OCR/blob/master/input%20image%20(1).png)
+![Product Name Screen Shot](https://github.com/RajArPatra/Super-OCR/blob/master/input%20image%20(1).png)
 
 We approach this problem in 2 parts to obtain  the details of the Invoice.
 
