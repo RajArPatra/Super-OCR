@@ -27,23 +27,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
+  
+  <h3 align="center">SUPER OCR</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    Templateless OCR solution for Maverics Botathon
+    
   </p>
 </p>
 
@@ -66,12 +55,10 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#references">Acknowledgements</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    
   </ol>
 </details>
 
@@ -80,18 +67,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/RajArPatra/Super-OCR/blob/master/input%20image%20(1).png)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+We approach this problem in 2 parts to obtain  the details of the Invoice.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+The first Part:
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+First our Algorithm Uses Thresholding And Morphological Transforms to detect upper boxes and after these upper boxes are detected, the text is obtained using an OCR and then its stored in a “csv” file.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+The Second Part:
+
+For the second part we use Tablenet , a deep learning model inspired from the paper:-
+After the image is passed through tablenet , tables along with columns are detected which makes it easier to get the line data from the Central Table and after this these are passed through OCR to get the Text,and then its stored in a “csv” file.Our solution is robust enough to process both digital and scanned copies of Invoices.
+
+
+
 
 ### Built With
 
@@ -101,65 +91,22 @@ This section should list any major frameworks that you built your project using.
 * [Laravel](https://laravel.com)
 
 
+## LINKS TO OUR SOLUTION
+* [Weight file](https://drive.google.com/file/d/1Tz9Y2MaS60eTx7HVfs9jQ-ZW9E_cAvqf/view?usp=sharing)
+* [Custom dataset](https://drive.google.com/file/d/1Tz9Y2MaS60eTx7HVfs9jQ-ZW9E_cAvqf/view?usp=sharing)
+* [Colab file](https://colab.research.google.com/drive/1M58WvFQnr31LwGE-sceo_pauvQS39jxu?usp=sharing)
+* [Video file](https://drive.google.com/file/d/1-apgY8D33nq20gM-QCwmZouoV7lVVApZ/view?usp=sharing)
+* [Github](https://github.com/RajArPatra/Super-OCR)
+* [Additional resources](https://drive.google.com/drive/folders/1TZHgGlCqzgw5s86DRNAVyxzjAY5h2lhU?usp=sharing)
+   
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+## References
+* [https://arxiv.org/abs/2001.01469](https://arxiv.org/abs/2001.01469)
+* [https://arxiv.org/abs/1703.06870](https://arxiv.org/abs/1703.06870)
+* [https://link.springer.com/chapter/10.1007/11551188_67#:~:text=We%20propose%20a%20workflow%20for,and%20(iii)%20table%20detection.](https://link.springer.com/chapter/10.1007/11551188_67#:~:text=We%20propose%20a%20workflow%20for,and%20(iii)%20table%20detection.)
+* [https://arxiv.org/abs/2011.13534](https://arxiv.org/abs/2011.13534)
 
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 
 
@@ -177,21 +124,6 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
 
 
 
