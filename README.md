@@ -48,9 +48,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-    </li>
     <li><a href="#references">Reference</a></li>
     <li><a href="#license">License</a></li>
    
